@@ -1,0 +1,66 @@
+post http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username":"Dilip Kumar Suthar",
+    "email":"dilipsuthar055@gmail.com",
+    "password": "789456123",
+    "role": "guest"
+}
+
+
+
+######
+post http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email":"dilipsuthar055@gmail.com",
+    "password": "789456123"
+}
+
+#####
+POST http://localhost:3000/createProfile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNzUyNzQzNTgwLCJleHAiOjE3NTI4Mjk5ODB9.rAfT3SKyezEevuK7qiRoiPZSPv4k-fGZOWYGGD3fwko
+Content-Type: application/json
+
+{
+  "gender":"male",
+  "age":24,
+  "phone":"7894561232",
+  "address":"Near to Highway"
+}
+
+
+
+#####
+
+
+get http://localhost:3000/getUserProfile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNzUyNzQzNTgwLCJleHAiOjE3NTI4Mjk5ODB9.rAfT3SKyezEevuK7qiRoiPZSPv4k-fGZOWYGGD3fwko
+
+
+
+
+
+#####
+post http://localhost:3000/addProperty
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6Imd1ZXN0IiwiaWF0IjoxNzUyODE1ODg2LCJleHAiOjE3NTI5MDIyODZ9.CglRwPAOOyYWUv0xUhCzQe0CLCU-Ud4rB3qBtuksEgM
+Content-Type: application/json
+
+{
+  "title": "A Beautiful Villa",
+  "description": "Best Place to stay near beach",
+  "pricePerNight": 1000,
+  "address": "Near to beach",
+  "country": "India",
+  "state": "Maharashtra",
+  "city": "Mumbai",
+  "zipCode": "400001",
+  "amenities": ["WiFi", "Pool", "AC"],
+  "propertyType": "Villa",
+  "guestCapacity": 6,
+  "bedrooms": 3,
+  "availableFrom": "2025-08-01",
+  "availableTo": "2025-12-31"
+}
